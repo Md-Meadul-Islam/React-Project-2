@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@300;500;800&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --primaryColor: hsl(94, 55%, 56%);
+    --hoverColor: hsl(93, 75%, 76%);
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --greyText: hsl(0, 0%, 75%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 14%, 97%);
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html {
+    font-size: 90%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: wheat;
+}
+
+li {
+    list-style: none;
+}
+
+.icon {
+    font-size: var(--h2FontSize);
+}
+
+img,
+video {
+    height: auto;
+    width: 100%;
+}
+
+.message {
+    display: none;
+}
+
+.showMessage {
+    display: block;
+    color: var(--whiteColor);
+    background: rgb(255, 0, 0);
+    border-radius: 3px;
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    color: var(--paleGreen);
+    background-color: hsl(0deg 4.59% 61.6%);
+}
+
+.btn .icon {
+    margin-left: .5rem;
+}
+
+.btn:hover {
+    color: var(--primaryColor);
+    background: var(--paleGreen);
+}
+
+
+/* pages styling */
+
+.loginPage,
+.registerPage {
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 7px 50px rgb(244, 223, 213);
+}
+
+.container {
+    height: 75vh;
+    width: 60%;
+    margin: auto;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: hsl(0, 0%, 91%);
+}
+
+.container .videoDiv {
+    display: flex;
+    position: relative;
+    flex-basis: 50%;
+    width: 70%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.container .videoDiv .textDiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 30%;
+}
+
+.container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.textDiv .title {
+    color: var(--whiteColor);
+    font-size: 35px;
+    font-weight: 800;
+    padding: 0 0.4%;
+}
+
+.container .videoDiv .footerDiv {
+    position: absolute;
+    bottom: 3%;
+    height: 3.5rem;
+    left: 5%;
+    width: 90%;
+    padding: 0 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.formDiv {
+    display: flex;
+    position: relative;
+    flex-basis: 50%;
+    width: 70%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.formDiv .headerDiv {
+    padding-bottom: 5%;
+}
+
+.formDiv .headerDiv h3 {
+    font-size: .8dvw;
+}
+
+.formDiv .headerDiv img {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+}
+
+.formDiv .inputDiv {
+    width: 100%;
+    text-align: left;
+}
+
+.formDiv .inputDiv .input {
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 0.8rem;
+    color: grey;
+}
+
+.formDiv .inputDiv .input input {
+    outline: none;
+    border: none;
+    padding: 0.8rem 1rem 0.8rem 0.5rem;
+    background-color: transparent;
+}
+
+.formDiv .btn {
+    justify-content: center;
+}
+
+@media (max-width:1024px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 80%;
+    }
+    .container .videoDiv {
+        width: 100%;
+        height: 40%;
+        flex-basis: 40%;
+    }
+    .container .formDiv {
+        width: 100%;
+        height: 60%;
+        flex-basis: 60%;
+    }
+}
